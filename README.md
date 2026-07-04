@@ -1,69 +1,71 @@
-# 🌐 MailSeed — Cartographiez l'utilisation de vos adresses email
+# 🌐 MailSeed — Map the Usage of Your Email Addresses
 
 [![AdonisJS](https://img.shields.io/badge/Framework-AdonisJS%20v6-5a45ff?style=flat-square&logo=adonisjs)](https://adonisjs.com/)
 [![Tailwind CSS](https://img.shields.io/badge/CSS-Tailwind%20v4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Bundler-Vite-646cff?style=flat-square&logo=vite)](https://vite.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-> **MailSeed** (anciennement _MailMap_) est une application web full-stack permettant de **centraliser**, **organiser** et **cartographier** l'utilisation de toutes vos adresses email.
+> **MailSeed** (formerly _MailMap_) is a full-stack web application designed to **centralize**, **organize**, and **map** the usage of all your email addresses.
 
-Que vous possédiez plusieurs boîtes mail personnelles, professionnelles, universitaires ou dédiées aux inscriptions, MailSeed vous permet de retrouver instantanément **quelle adresse est utilisée sur quel service**.
+Whether you have multiple personal, professional, academic, or sign-up email accounts, MailSeed helps you instantly find **which email address is linked to which online service**.
 
 ---
 
-## 📖 Sommaire
+## 📖 Table of Contents
 
-- [🎯 Le projet](#-le-projet)
-- [🚀 Fonctionnalités](#-fonctionnalités)
-- [🛠️ Stack technique](#️-stack-technique)
+- [🎯 Project Overview](#-project-overview)
+- [🚀 Features](#-features)
+- [🛠️ Tech Stack](#️-tech-stack)
 - [📂 Architecture](#-architecture)
 - [⚙️ Installation](#️-installation)
-- [🚀 Lancement du projet](#-lancement-du-projet)
+- [🚀 Running the Project](#-running-the-project)
 - [📌 Roadmap](#-roadmap)
-- [👤 Auteur](#-auteur)
-- [📄 Licence](#-licence)
+- [💡 Use Cases](#-use-cases)
+- [👤 Author](#-author)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
-# 🎯 Le projet
+# 🎯 Project Overview
 
-Aujourd'hui, nous possédons souvent plusieurs adresses email :
+Nowadays, most of us own multiple email addresses:
 
-- 📧 Adresse personnelle
-- 💼 Adresse professionnelle
-- 🛒 Adresse dédiée aux achats
-- 📨 Adresse "junk mail"
-- 🎓 Adresse étudiante
-- 🔐 Adresse réservée aux comptes sensibles
+- 📧 Personal email
+- 💼 Work email
+- 🛒 Shopping email
+- 📨 Junk mail address
+- 🎓 Student email
+- 🔐 Email reserved for sensitive accounts
 
-Après plusieurs années, il devient presque impossible de se souvenir :
+After a few years, it becomes almost impossible to remember:
 
-- Quel email est utilisé pour Netflix ?
-- Avec quelle adresse suis-je inscrit sur Kraken ?
-- Quel compte est associé à LinkedIn ?
-- Où ai-je créé mon compte GitHub ?
-- Quelle adresse dois-je utiliser pour réinitialiser mon mot de passe ?
+- Which email did I use for Netflix?
+- Which address is linked to my Kraken account?
+- Which account is associated with LinkedIn?
+- Which email did I use to create my GitHub account?
+- Which address should I use to reset my password?
 
-**MailSeed** répond précisément à ce problème.
+**MailSeed** solves exactly this problem.
 
-L'application agit comme une véritable **cartographie de votre identité numérique**, en reliant chacune de vos adresses email aux plateformes où elles sont utilisées.
-
----
-
-# 🚀 Fonctionnalités
-
-## 📧 Gestion des adresses email
-
-- Ajouter plusieurs adresses email
-- Les organiser facilement
-- Les modifier ou supprimer
-- Identifier rapidement leur utilisation
+The application acts as a true **map of your digital identity**, linking each of your email addresses to the platforms where they are used.
 
 ---
 
-## 🗂️ Gestion des plateformes
+# 🚀 Features
 
-Associez chaque adresse à des plateformes comme :
+## 📧 Email Address Management
+
+- Add multiple email addresses
+- Organize them easily
+- Edit or delete them
+- Instantly identify where each one is used
+
+---
+
+## 🗂️ Platform Management
+
+Associate each email address with platforms such as:
 
 - Netflix
 - Amazon
@@ -75,60 +77,60 @@ Associez chaque adresse à des plateformes comme :
 - Discord
 - Steam
 - Spotify
-- etc.
+- and many more.
 
-Chaque plateforme est liée à **une seule adresse email**, ce qui permet de retrouver immédiatement le bon compte.
-
----
-
-## 🔍 Recherche instantanée
-
-Recherchez :
-
-- un nom de plateforme
-- une adresse email
-- un mot-clé
-
-Et retrouvez immédiatement l'association correspondante.
+Each platform is linked to **a single email address**, making it easy to retrieve the correct account whenever you need it.
 
 ---
 
-## 📊 Tableau de bord
+## 🔍 Instant Search
 
-Une interface moderne permettant de visualiser :
+Search by:
 
-- toutes vos adresses
-- tous les services associés
-- le nombre de plateformes par email
-- une navigation claire sous forme de cartes
+- Platform name
+- Email address
+- Keyword
 
----
-
-## 🔐 Gestion sécurisée
-
-Le projet est conçu pour fonctionner avec un espace utilisateur sécurisé.
-
-À terme :
-
-- authentification
-- chiffrement
-- gestion multi-utilisateur
+And instantly find the matching association.
 
 ---
 
-# 🛠️ Stack technique
+## 📊 Dashboard
 
-Le projet repose sur des technologies modernes.
+A modern interface that lets you visualize:
 
-| Technologie             | Description                             |
+- All your email addresses
+- All associated services
+- The number of platforms linked to each email
+- A clean, card-based navigation experience
+
+---
+
+## 🔐 Secure Management
+
+The project is designed to run within a secure user workspace.
+
+Future versions will include:
+
+- User authentication
+- Data encryption
+- Multi-user support
+
+---
+
+# 🛠️ Tech Stack
+
+The project is built with modern technologies.
+
+| Technology              | Description                             |
 | ----------------------- | --------------------------------------- |
-| **AdonisJS v6**         | Framework Backend Node.js               |
-| **TypeScript**          | Typage strict                           |
-| **EdgeJS**              | Moteur de templates                     |
-| **Tailwind CSS v4**     | UI moderne                              |
-| **Vite**                | Bundler ultra rapide                    |
-| **Node.js**             | Runtime JavaScript                      |
-| **SQLite / PostgreSQL** | Base de données (selon l'environnement) |
+| **AdonisJS v6**         | Node.js Backend Framework               |
+| **TypeScript**          | Strong typing                           |
+| **EdgeJS**              | Template engine                         |
+| **Tailwind CSS v4**     | Modern UI framework                     |
+| **Vite**                | Lightning-fast bundler                  |
+| **Node.js**             | JavaScript runtime                      |
+| **SQLite / PostgreSQL** | Database (depending on the environment) |
 
 ---
 
@@ -164,10 +166,10 @@ mailseed/
 
 # ⚙️ Installation
 
-## 1. Cloner le projet
+## 1. Clone the repository
 
 ```bash
-git clone https://github.com/votre-compte/mailseed.git
+git clone https://github.com/your-account/mailseed.git
 ```
 
 ```bash
@@ -176,7 +178,7 @@ cd mailseed
 
 ---
 
-## 2. Installer les dépendances
+## 2. Install dependencies
 
 ```bash
 npm install
@@ -184,17 +186,17 @@ npm install
 
 ---
 
-## 3. Configurer l'environnement
+## 3. Configure the environment
 
 ```bash
 cp .env.example .env
 ```
 
-Configurez ensuite votre base de données dans le fichier `.env`.
+Then configure your database settings in the `.env` file.
 
 ---
 
-## 4. Lancer les migrations
+## 4. Run the migrations
 
 ```bash
 node ace migration:run
@@ -202,13 +204,13 @@ node ace migration:run
 
 ---
 
-## 5. Démarrer le serveur
+## 5. Start the development server
 
 ```bash
 node ace serve --watch
 ```
 
-Le projet sera disponible sur :
+The application will be available at:
 
 ```
 http://localhost:3333
@@ -216,33 +218,33 @@ http://localhost:3333
 
 ---
 
-# 🚀 Commandes utiles
+# 🚀 Useful Commands
 
-### Développement
+### Development server
 
 ```bash
 node ace serve --watch
 ```
 
-### Compilation des assets
+### Asset compilation
 
 ```bash
 npm run dev
 ```
 
-### Build production
+### Production build
 
 ```bash
 npm run build
 ```
 
-### Lancer les migrations
+### Run migrations
 
 ```bash
 node ace migration:run
 ```
 
-### Réinitialiser la base
+### Reset the database
 
 ```bash
 node ace migration:refresh
@@ -254,97 +256,97 @@ node ace migration:refresh
 
 ## Version 1
 
-- [x] Gestion des emails
-- [x] Gestion des plateformes
+- [x] Email management
+- [x] Platform management
 - [x] Dashboard
-- [x] Recherche rapide
+- [x] Quick search
 
 ---
 
 ## Version 2
 
-- [ ] Authentification
-- [ ] Comptes utilisateurs
-- [ ] Catégories
-- [ ] Icônes automatiques des plateformes
-- [ ] Statistiques
+- [ ] Authentication
+- [ ] User accounts
+- [ ] Categories
+- [ ] Automatic platform icons
+- [ ] Statistics
 
 ---
 
 ## Version 3
 
-- [ ] Import CSV
-- [ ] Export CSV
-- [ ] Synchronisation cloud
-- [ ] API REST
-- [ ] Application mobile
+- [ ] CSV import
+- [ ] CSV export
+- [ ] Cloud synchronization
+- [ ] REST API
+- [ ] Mobile application
 
 ---
 
-# 💡 Cas d'utilisation
+# 💡 Use Cases
 
-MailSeed est particulièrement utile si vous :
+MailSeed is especially useful if you:
 
-- possédez plusieurs adresses email ;
-- utilisez des dizaines, voire des centaines de services en ligne ;
-- oubliez régulièrement quelle adresse est associée à un compte ;
-- souhaitez mieux organiser votre identité numérique ;
-- cherchez un tableau de bord simple pour gérer vos comptes.
+- manage multiple email addresses;
+- use dozens or even hundreds of online services;
+- regularly forget which email is linked to a specific account;
+- want to better organize your digital identity;
+- are looking for a simple dashboard to manage your online accounts.
 
 ---
 
-# 👤 Auteur
+# 👤 Author
 
-Développé avec ❤️ par **Nuno Fernandes**
+Developed with ❤️ by **Nuno Fernandes**
 
 **Full-Stack Engineer**
 
-Si vous souhaitez échanger autour du projet, proposer une amélioration ou collaborer, n'hésitez pas à me contacter.
+If you'd like to discuss the project, suggest improvements, or collaborate, feel free to get in touch.
 
 ---
 
-# 🤝 Contribution
+# 🤝 Contributing
 
-Les contributions sont les bienvenues !
+Contributions are welcome!
 
-1. Forkez le projet.
-2. Créez une branche :
-
-```bash
-git checkout -b feature/ma-feature
-```
-
-3. Committez vos modifications :
+1. Fork the repository.
+2. Create a new branch:
 
 ```bash
-git commit -m "Ajout de ma fonctionnalité"
+git checkout -b feature/my-feature
 ```
 
-4. Poussez votre branche :
+3. Commit your changes:
 
 ```bash
-git push origin feature/ma-feature
+git commit -m "Add my new feature"
 ```
 
-5. Ouvrez une Pull Request.
+4. Push your branch:
+
+```bash
+git push origin feature/my-feature
+```
+
+5. Open a Pull Request.
 
 ---
 
-# 📄 Licence
+# 📄 License
 
-Ce projet est distribué sous licence **MIT**.
+This project is distributed under the **MIT License**.
 
-Vous êtes libre de :
+You are free to:
 
-- utiliser le projet ;
-- le modifier ;
-- le distribuer ;
-- l'adapter à vos besoins.
+- use the project;
+- modify it;
+- distribute it;
+- adapt it to your needs.
 
-Voir le fichier **LICENSE** pour plus d'informations.
+See the **LICENSE** file for more information.
 
 ---
 
 **MailSeed** 🌱
 
-_Cartographiez votre identité numérique, une adresse email à la fois._
+_Map your digital identity, one email address at a time._
