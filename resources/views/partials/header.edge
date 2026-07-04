@@ -1,0 +1,22 @@
+<header>
+  <div class="container mx-auto w-full flex justify-around items-center h-16">
+    <div>
+      @link({ route: 'home', text: 'Home' })
+        <span class="text-2xl font-bold">MailSeed</span>
+      @end
+    </div>
+    <div>
+      <nav class="flex items-center gap-3">
+        @if(auth.user)
+          @!avatar({ initials: auth.user.initials })
+          @form({ route: 'session.destroy', method: 'POST' })
+            @!button({ text: 'Logout' })
+          @end
+        @else
+          @!link({ route: 'new_account.create', text: 'Signup' })
+          @!link({ route: 'session.create', text: 'Login' })
+        @end
+      </nav>
+    </div>
+  </div>
+</header>

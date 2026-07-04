@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+/* Depuis la racine du projet (Vite), on cible tout le dossier resources.
+   C'est ça qui va activer immédiatement tes classes p-4, max-w-md, etc.
+*/
+@source "./resources/**/*.edge";
+@theme {
+  /* --- Palette de couleurs personnalisée --- */
+  --color-brand-dark: #050507;
+  --color-brand-card: #0b0b0f;
+  --color-brand-border: #171721;
+
+  --color-cyber-purple: #7c3aed;
+  --color-neon-indigo: #4f46e5;
+  --color-neon-pink: #ec4899;
+
+  /* --- Animations fluides --- */
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* --- Redéfinition propre du Container pour ton Header et ta Page --- */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 1280px;
+}
+
+/* --- Effet de fond étoilé / Grille subtile (Optionnel mais très SaaS) --- */
+body {
+  background-color: var(--color-brand-dark);
+  color: #f4f4f5;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.08) 0px, transparent 50%);
+  background-attachment: fixed;
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}

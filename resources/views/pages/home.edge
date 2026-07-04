@@ -1,0 +1,73 @@
+@layout('components/layout')
+  @slot('title')
+    MailSeed - Tracez et protégez vos emails
+  @end
+
+  <section
+    class="flex flex-col items-center justify-center text-center px-4 pt-20 pb-16 bg-zinc-950 text-white min-h-[70vh]"
+  >
+    <div class="container mx-auto max-w-4xl">
+      <span
+        class="px-3 py-1 text-xs font-medium text-indigo-400 bg-indigo-500/10 rounded-full border border-indigo-500/20 inline-block mb-6"
+      >
+        Projet Open-Source v1.0
+      </span>
+
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6">
+        Sachez exactement où vos
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">
+          emails sont semés
+        </span>.
+      </h1>
+
+      <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
+        Visualisez la distribution de vos données. Créez des adresses uniques pour chaque service et cartographiez instantanément qui partage vos accès.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="{{ route('new_account.create') }}"
+          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg shadow-indigo-600/20 transition-all"
+        >
+          Créer un compte
+        </a>
+        <a
+          href="#features"
+          class="px-6 py-3 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 font-semibold rounded-lg border border-zinc-800 transition-all"
+        >
+          Découvrir les fonctionnalités
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-20 bg-zinc-900 border-t border-zinc-800 text-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
+          <div class="text-indigo-500 text-2xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-2">Cartographie Visuelle</h3>
+          <p class="text-zinc-400 text-sm">
+            Visualisez sous forme de graphe interactif quelle plateforme détient quelle adresse email.
+          </p>
+        </div>
+
+        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
+          <div class="text-indigo-500 text-2xl mb-4">🚨</div>
+          <h3 class="text-xl font-bold mb-2">Détection de Fuites</h3>
+          <p class="text-zinc-400 text-sm">
+            Soyez alerté immédiatement si un tiers utilise un email dédié à un service spécifique.
+          </p>
+        </div>
+
+        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
+          <div class="text-indigo-500 text-2xl mb-4">🛡️</div>
+          <h3 class="text-xl font-bold mb-2">Contrôle Total</h3>
+          <p class="text-zinc-400 text-sm">
+            Analysez la réputation et l'intégrité de vos interactions numériques en un coup d'œil.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+@end
