@@ -1,36 +1,18 @@
 @layout('components/layout')
   @slot('title')
-    MailSeed - Login
+    MailSeed - Sign In
   @end
 
-  <div class="form-container">
-    <div>
-      <h1>Login</h1>
-      <p>Enter your email and password below to log in</p>
-    </div>
+  <section class="relative isolate overflow-hidden py-10 sm:py-16">
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-indigo-500/10 via-violet-500/5 to-transparent blur-3xl"
+    ></div>
 
-    <div>
-      @form({ route: 'session.store', method: 'POST' })
-        <div>
-          @field.root({ name: 'email' })
-            @!field.label({ text: 'Email' })
-            @!input.control({ type: 'email' })
-            @!field.error()
-          @end
-        </div>
-
-        <div>
-          @field.root({ name: 'password' })
-            @!field.label({ text: 'Password' })
-            @!input.control({ type: 'password' })
-            @!field.error()
-          @end
-        </div>
-
-        <div>
-          @!button({ text: 'Login', type: 'submit' })
-        </div>
+    <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      @component('components/login/welcome-back')
+      @end
+      @component('components/login/login-form')
       @end
     </div>
-  </div>
+  </section>
 @end

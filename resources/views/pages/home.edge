@@ -1,70 +1,191 @@
 @layout('components/layout')
   @slot('title')
-    MailSeed - Tracez et protégez vos emails
+    MailSeed - Map the email address behind every account
   @end
 
-  <section
-    class="flex flex-col items-center justify-center text-center px-4 pt-20 pb-16 bg-zinc-950 text-white min-h-[70vh]"
-  >
-    <div class="container mx-auto max-w-4xl">
-      <span
-        class="px-3 py-1 text-xs font-medium text-indigo-400 bg-indigo-500/10 rounded-full border border-indigo-500/20 inline-block mb-6"
+  <section class="relative isolate overflow-hidden py-10 sm:py-16">
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-indigo-500/10 via-violet-500/5 to-transparent blur-3xl"
+    ></div>
+
+    <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div
+        class="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-indigo-950/20 backdrop-blur sm:p-10"
       >
-        Projet Open-Source v1.0
-      </span>
-
-      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6">
-        Sachez exactement où vos
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">
-          emails sont semés
-        </span>.
-      </h1>
-
-      <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
-        Visualisez la distribution de vos données. Créez des adresses uniques pour chaque service et cartographiez instantanément qui partage vos accès.
-      </p>
-
-      <div class="flex flex-wrap justify-center gap-4">
-        <a
-          href="{{ route('new_account.create') }}"
-          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg shadow-indigo-600/20 transition-all"
+        <span
+          class="mb-6 inline-flex rounded-full border border-indigo-400/20 bg-indigo-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-indigo-200"
         >
-          Créer un compte
-        </a>
-        <a
-          href="#features"
-          class="px-6 py-3 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 font-semibold rounded-lg border border-zinc-800 transition-all"
-        >
-          Découvrir les fonctionnalités
-        </a>
+          Organize your digital identity
+        </span>
+
+        <h1 class="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Know exactly which email address is linked to every online account.
+        </h1>
+
+        <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
+          MailSeed helps you centralize, organize, and retrieve the email address used for each platform, so you always know where to sign in, recover, or update an account.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="{{ route('new_account.create') }}"
+            class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-900/30 transition hover:scale-[1.01] hover:from-indigo-400 hover:to-violet-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/20"
+          >
+            Create your account
+          </a>
+          <a
+            href="{{ route('session.create') }}"
+            class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-zinc-950/70 px-6 py-3.5 text-sm font-semibold text-zinc-200 transition hover:border-white/20 hover:bg-zinc-900"
+          >
+            Sign in
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Map</p>
+            <p class="mt-2 text-sm text-zinc-200">
+              Link each platform to the email address you actually used.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Find</p>
+            <p class="mt-2 text-sm text-zinc-200">
+              Recover the right account details in seconds when you need them.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Organize</p>
+            <p class="mt-2 text-sm text-zinc-200">
+              Keep personal, work, student, and signup emails in one place.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-8 shadow-2xl shadow-black/30 ring-1 ring-white/5 backdrop-blur sm:p-10"
+      >
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-medium text-violet-300">Workspace preview</p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-white">
+              A cleaner view of your email usage
+            </h2>
+          </div>
+          <span
+            class="inline-flex rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200"
+          >
+            Searchable
+          </span>
+        </div>
+
+        <div class="mt-8 space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold text-white">Netflix</p>
+                <p class="mt-1 text-sm text-zinc-400">Personal streaming account</p>
+              </div>
+              <span
+                class="rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-200"
+              >
+                personal@email.com
+              </span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold text-white">GitHub</p>
+                <p class="mt-1 text-sm text-zinc-400">Development and side projects</p>
+              </div>
+              <span
+                class="rounded-full bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200"
+              >
+                work@email.com
+              </span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold text-white">LinkedIn</p>
+                <p class="mt-1 text-sm text-zinc-400">Professional identity</p>
+              </div>
+              <span
+                class="rounded-full bg-fuchsia-500/10 px-3 py-1 text-xs font-medium text-fuchsia-200"
+              >
+                career@email.com
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <p class="text-2xl font-black text-white">100%</p>
+            <p class="mt-1 text-sm text-zinc-400">
+              Clearer view of which email belongs to which service.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <p class="text-2xl font-black text-white">1 workspace</p>
+            <p class="mt-1 text-sm text-zinc-400">
+              For all your personal, work, academic, and signup addresses.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="features" class="py-20 bg-zinc-900 border-t border-zinc-800 text-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
-          <div class="text-indigo-500 text-2xl mb-4">📊</div>
-          <h3 class="text-xl font-bold mb-2">Cartographie Visuelle</h3>
-          <p class="text-zinc-400 text-sm">
-            Visualisez sous forme de graphe interactif quelle plateforme détient quelle adresse email.
+  <section id="features" class="py-8 sm:py-12">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-8 max-w-2xl">
+        <span
+          class="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-300"
+        >
+          Why MailSeed
+        </span>
+        <h2 class="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
+          Built to make account recovery and email organization easier
+        </h2>
+        <p class="mt-4 text-base leading-7 text-zinc-400">
+          From quick lookups to a complete map of your online identity, MailSeed keeps every association readable and easy to manage.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div
+          class="rounded-[1.75rem] border border-white/10 bg-zinc-950/80 p-6 shadow-xl shadow-black/20 ring-1 ring-white/5"
+        >
+          <p class="text-sm font-semibold text-indigo-300">Email address management</p>
+          <h3 class="mt-3 text-xl font-bold text-white">Centralize every address you use</h3>
+          <p class="mt-3 text-sm leading-6 text-zinc-400">
+            Add personal, work, shopping, student, or backup emails and keep them organized in one interface.
           </p>
         </div>
 
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
-          <div class="text-indigo-500 text-2xl mb-4">🚨</div>
-          <h3 class="text-xl font-bold mb-2">Détection de Fuites</h3>
-          <p class="text-zinc-400 text-sm">
-            Soyez alerté immédiatement si un tiers utilise un email dédié à un service spécifique.
+        <div
+          class="rounded-[1.75rem] border border-white/10 bg-zinc-950/80 p-6 shadow-xl shadow-black/20 ring-1 ring-white/5"
+        >
+          <p class="text-sm font-semibold text-violet-300">Platform mapping</p>
+          <h3 class="mt-3 text-xl font-bold text-white">Know which service uses which email</h3>
+          <p class="mt-3 text-sm leading-6 text-zinc-400">
+            Associate each platform with a single address so you can always retrieve the correct account.
           </p>
         </div>
 
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
-          <div class="text-indigo-500 text-2xl mb-4">🛡️</div>
-          <h3 class="text-xl font-bold mb-2">Contrôle Total</h3>
-          <p class="text-zinc-400 text-sm">
-            Analysez la réputation et l'intégrité de vos interactions numériques en un coup d'œil.
+        <div
+          class="rounded-[1.75rem] border border-white/10 bg-zinc-950/80 p-6 shadow-xl shadow-black/20 ring-1 ring-white/5"
+        >
+          <p class="text-sm font-semibold text-fuchsia-300">Instant search</p>
+          <h3 class="mt-3 text-xl font-bold text-white">Search by service, email, or keyword</h3>
+          <p class="mt-3 text-sm leading-6 text-zinc-400">
+            Jump straight to the matching association without scanning dozens of old accounts or inboxes.
           </p>
         </div>
       </div>
