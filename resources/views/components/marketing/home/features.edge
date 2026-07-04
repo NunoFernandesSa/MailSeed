@@ -1,0 +1,39 @@
+<section id="features" class="py-8 sm:py-12">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-8 max-w-2xl">
+      @component('components/ui/badge', { tone: 'neutral', text: 'Why MailSeed' })
+      @end
+
+      <h2 class="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
+        Built to make account recovery and email organization easier
+      </h2>
+      <p class="mt-4 text-base leading-7 text-zinc-400">
+        From quick lookups to a complete map of your online identity, MailSeed keeps every association readable and easy to manage.
+      </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      @component('components/ui/panel', { variant: 'feature' })
+        <p class="text-sm font-semibold text-indigo-300">Email address management</p>
+        <h3 class="mt-3 text-xl font-bold text-white">Centralize every address you use</h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">
+          Add personal, work, shopping, student, or backup emails and keep them organized in one interface.
+        </p>
+      @end
+      @component('components/ui/panel', { variant: 'feature' })
+        <p class="text-sm font-semibold text-violet-300">Platform mapping</p>
+        <h3 class="mt-3 text-xl font-bold text-white">Know which service uses which email</h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">
+          Associate each platform with a single address so you can always retrieve the correct account.
+        </p>
+      @end
+      @component('components/ui/panel', { variant: 'feature' })
+        <p class="text-sm font-semibold text-fuchsia-300">Instant search</p>
+        <h3 class="mt-3 text-xl font-bold text-white">Search by service, email, or keyword</h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">
+          Jump straight to the matching association without scanning dozens of old accounts or inboxes.
+        </p>
+      @end
+    </div>
+  </div>
+</section>

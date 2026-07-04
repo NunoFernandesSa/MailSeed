@@ -1,0 +1,63 @@
+@component('components/ui/panel', { variant: 'dark' })
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <p class="text-sm font-medium text-violet-300">Workspace preview</p>
+      <h2 class="mt-2 text-3xl font-bold tracking-tight text-white">
+        A cleaner view of your email usage
+      </h2>
+    </div>
+    @component('components/ui/badge', { tone: 'success', text: 'Searchable' })
+    @end
+  </div>
+
+  <div class="mt-8 space-y-4">
+    @component('components/ui/panel', { variant: 'soft' })
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold text-white">Netflix</p>
+          <p class="mt-1 text-sm text-zinc-400">Personal streaming account</p>
+        </div>
+        <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-200">
+          personal@email.com
+        </span>
+      </div>
+    @end
+    @component('components/ui/panel', { variant: 'soft' })
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold text-white">GitHub</p>
+          <p class="mt-1 text-sm text-zinc-400">Development and side projects</p>
+        </div>
+        <span class="rounded-full bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200">
+          work@email.com
+        </span>
+      </div>
+    @end
+    @component('components/ui/panel', { variant: 'soft' })
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold text-white">LinkedIn</p>
+          <p class="mt-1 text-sm text-zinc-400">Professional identity</p>
+        </div>
+        <span class="rounded-full bg-fuchsia-500/10 px-3 py-1 text-xs font-medium text-fuchsia-200">
+          career@email.com
+        </span>
+      </div>
+    @end
+  </div>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2">
+    @component('components/ui/panel', { variant: 'tile' })
+      <p class="text-2xl font-black text-white">100%</p>
+      <p class="mt-1 text-sm text-zinc-400">
+        Clearer view of which email belongs to which service.
+      </p>
+    @end
+    @component('components/ui/panel', { variant: 'tile' })
+      <p class="text-2xl font-black text-white">1 workspace</p>
+      <p class="mt-1 text-sm text-zinc-400">
+        For all your personal, work, academic, and signup addresses.
+      </p>
+    @end
+  </div>
+@end

@@ -1,0 +1,52 @@
+@component('components/ui/panel', { variant: 'glass' })
+  @component('components/ui/badge', {
+    tone: 'indigo',
+    text: 'Organize your digital identity',
+    class: 'mb-6',
+  })
+  @end
+
+  <h1 class="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+    Know exactly which email address is linked to every online account.
+  </h1>
+
+  <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
+    MailSeed helps you centralize, organize, and retrieve the email address used for each platform, so you always know where to sign in, recover, or update an account.
+  </p>
+
+  <div class="mt-8 flex flex-wrap gap-4">
+    <a
+      href="{{ route('new_account.create') }}"
+      class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-900/30 transition hover:scale-[1.01] hover:from-indigo-400 hover:to-violet-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/20"
+    >
+      Create your account
+    </a>
+    <a
+      href="{{ route('session.create') }}"
+      class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-zinc-950/70 px-6 py-3.5 text-sm font-semibold text-zinc-200 transition hover:border-white/20 hover:bg-zinc-900"
+    >
+      Sign in
+    </a>
+  </div>
+
+  <div class="mt-10 grid gap-4 sm:grid-cols-3">
+    @component('components/ui/panel', { variant: 'tile' })
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Map</p>
+      <p class="mt-2 text-sm text-zinc-200">
+        Link each platform to the email address you actually used.
+      </p>
+    @end
+    @component('components/ui/panel', { variant: 'tile' })
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Find</p>
+      <p class="mt-2 text-sm text-zinc-200">
+        Recover the right account details in seconds when you need them.
+      </p>
+    @end
+    @component('components/ui/panel', { variant: 'tile' })
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Organize</p>
+      <p class="mt-2 text-sm text-zinc-200">
+        Keep personal, work, student, and signup emails in one place.
+      </p>
+    @end
+  </div>
+@end
